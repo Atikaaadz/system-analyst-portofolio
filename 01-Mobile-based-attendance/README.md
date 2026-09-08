@@ -1,10 +1,10 @@
 # Mobile-Based Attendance Information System
 
-## 1. Porject Overview
+## 1. Project Overview
 Sistem Presensi berbasis mobile yang menggunakan teknologi Location-Based Service merupakan sistem yang dikembangkan yang digunakan untuk membantu dalam proses pencatatan kehadiran peserta kegiatan dengan memvalidasi lokasi realtime peserta. Sistem ini juga dapat membantu pengelolaaan data jadwal kegiatan dan data  kehadiran peserta yang lebih mudah dan efisien. sistem ini mempunyai dua aktor utama yaitu:
 - Admin
 - Participant
-- 
+  
 ## 2. Background
 Pencatatan kehadiran sebelumnya dilakukan secara manual sehingga menimbulkan kendala antara lain:
 - Buku kehadiran sering hilang.
