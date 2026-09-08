@@ -43,7 +43,7 @@ Pengujian mencakup fungsi Participant dan Admin, proses autentikasi, pengelolaan
 | TS-29 | Kelola Data Kehadiran | Admin               | Memastikan sistem menangani kondisi ketika data kehadiran belum tersedia.                      |
 | TS-30 | Laporan Kehadiran     | Admin               | Memastikan Admin dapat melihat rekapitulasi kehadiran.                                         |
 | TS-31 | Laporan Kehadiran     | Admin               | Memastikan sistem menangani kondisi ketika data laporan belum tersedia.                        |                                  |
-| TS-32 | Session               | Admin & Participant | Memastikan halaman yang membutuhkan autentikasi tidak dapat diakses setelah logout.            |
+
 
 ---
 
