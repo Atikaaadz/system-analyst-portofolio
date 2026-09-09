@@ -13,3 +13,4 @@
 | US-10 | Kelola Data Kehadiran| Sebagai Admin, saya ingin melihat dan mengelola data kehadiran agar dapat memantau presensi Participant.|
 | US-11 | Laporan Kehadiran| Sebagai Admin, saya ingin melihat rekapitulasi kehadiran agar dapat memperoleh informasi kehadiran peserta.|
 | US-12 | Kelola Pengajuan Izin | Sebagai Admin, saya ingin melihat rekapitulasi kehadiran agar dapat memperoleh informasi kehadiran peserta.|
+| US-13 | Kelola Data Peserta | Sebagai Admin, saya ingin melihat dan menghapus data participant yang sudah tidak mengikuti kegiatan agar tetap tersortir.|
