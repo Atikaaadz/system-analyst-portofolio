@@ -1,5 +1,5 @@
 # Functional Requiremements
-| ID | Functional Requirement | Actor | Description | Status |
+| ID | Functional Requirement | Actor | Description |
 |---|---|---|---|---|
 |FR01|Registrasi|Participant|Sistem memungkinkan participant membuat akun|
 |FR02|Login|Participant & Admin |Sistem memungkinkan pengguna masuk menggunakan akun yang terdaftar|
@@ -13,3 +13,4 @@
 |FR10|Kelola Data Kehadiran|Admin|Sistem memungkinkan Admin melihat  dan mengelola status pada data kehadiran|
 |FR11|Kelola Pengajuan Izin|Admin|Sistem memungkinkan Admin mengelola status pengajuan izin participant|
 |FR12|Laporan Kehadiran|Admin|Sistem memungkinkan admin melihat rekap data kehadiran|
+|FR13|Kelola Data Peserta|Admin|Sistem memungkinkan admin melihat dan menghapus data participant|
