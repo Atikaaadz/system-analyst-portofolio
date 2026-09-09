@@ -12,10 +12,15 @@ Needs:
 - Pengelolaan jadwal kegiatan.
 - Akses terhadap rekap dan data kehadiran.
 - Mengelola pengajuan izin dari participant.
+- Mengelola data participant.
+
+  
 Pain points:
 - Rekap manual dengan waktu tambahan.
 - Risiko kesalahan pencatatan kehadiran.
+
 System Support:
+
 Sistem menyediakan fitur dashboard dan fitur pengelola data.
 
 ## 3. Participant
@@ -29,9 +34,13 @@ Needs:
 - Akses terhadap riwayat kehadiran dan izin.
 - Pengajuan izin.
 - Pengelolaan profile.
+
+  
 Pain points:
 - Memastikan participant hadir di lokasi.
 - Tidak mengetahui riwayat kehadiran secara praktis.
 - Presensi manual menggunakan buku atau daftar hadir.
+
 System support:
+
 Sistem menyediakan presensi berbasis lokasi, pengajuan izin, akses jadwal dan riwayat kehadiran.
