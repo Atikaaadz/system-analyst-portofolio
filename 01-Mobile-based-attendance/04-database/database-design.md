@@ -1,47 +1,42 @@
 # Database Design
 
-## 2. Entity / Table Description
+## 1. Entity / Table Description
 
 | Table       | Description                                                                                             |
 | ----------- | ------------------------------------------------------------------------------------------------------- |
 | users     | Menyimpan data akun yang digunakan untuk autentikasi admin pada sistem.                              |
 | penggunas | Menyimpan informasi participant seperti nama, email, nomor handphone, dan alamat.                          |
 | jadwals   | Menyimpan informasi kegiatan, termasuk jadwal dan lokasi kegiatan yang digunakan dalam proses presensi. |
-| presensis | Menyimpan data presensi participant, termasuk waktu presensi, lokasi pengguna, dan status kehadiran.       |
+| presensis | Menyimpan data presensi participant, termasuk waktu presensi, lokasi participant, dan status kehadiran.       |
 
 
 ## 2. Table Structure
 
 ### 2.1 users
 
-Tabel `users` digunakan untuk menyimpan data akun pengguna yang berkaitan dengan proses autentikasi sistem.
+Tabel `users` digunakan untuk menyimpan data akun admin yang berkaitan dengan proses autentikasi sistem.
 
 | Field               | Data Type           | Key    | Description                                          |
 | ------------------- | ------------------- | ------ | ---------------------------------------------------- |
-| id                | bigint(20) unsigned | PK     | Identitas unik akun pengguna.                        |
-| name              | varchar(255)        | -      | Nama pengguna.                                       |
-| email             | varchar(255)        | Unique | Email yang digunakan untuk akun pengguna.            |
-| email_verified_at | timestamp           | -      | Waktu ketika email pengguna berhasil diverifikasi.   |
-| password          | varchar(255)        | -      | Password akun pengguna yang disimpan dalam database. |
-| remember_token    | varchar(100)        | -      | Token untuk mempertahankan sesi login pengguna.      |
-| created_at        | timestamp           | -      | Waktu data akun dibuat.                              |
-| updated_at        | timestamp           | -      | Waktu terakhir data akun diperbarui.                 |
+| name              | varchar(255)        | -      | Nama admin.                                       |
+| email             | varchar(255)        | PK | Email yang digunakan untuk akun admin.            |
+| password          | varchar(255)        | -      | Password akun admin yang disimpan dalam database. |
 
 
 ### 2.2 `penggunas`
 
-Tabel `penggunas` digunakan untuk menyimpan informasi pengguna yang digunakan dalam sistem presensi.
+Tabel `penggunas` digunakan untuk menyimpan informasi participant yang digunakan dalam sistem presensi.
 
 | Field        | Data Type        | Key    | Description                              |
 | ------------ | ---------------- | ------ | ---------------------------------------- |
-| user_id    | int(10) unsigned | PK     | Identitas unik pengguna.                 |
-| nama       | varchar(100)     | -      | Nama pengguna.                           |
-| email      | varchar(100)     | Unique | Email pengguna.                          |
-| password   | varchar(100)     | -      | Password pengguna.                       |
-| no_hp      | varchar(20)      | -      | Nomor handphone pengguna.                |
-| alamat    | text             | -      | Alamat pengguna.                         |
-| created_at | timestamp        | -      | Waktu data pengguna dibuat.              |
-| updated_at | timestamp        | -      | Waktu terakhir data pengguna diperbarui. |
+| user_id    | int(10) unsigned | PK     | Identitas unik participant.                 |
+| nama       | varchar(100)     | -      | Nama participant.                           |
+| email      | varchar(100)     | Unique | Email participant.                          |
+| password   | varchar(100)     | -      | Password participant.                       |
+| no_hp      | varchar(20)      | -      | Nomor handphone participant.                |
+| alamat    | text             | -      | Alamat participant.                         |
+| created_at | timestamp        | -      | Waktu data participant dibuat.              |
+| updated_at | timestamp        | -      | Waktu terakhir data participant diperbarui. |
 
 ---
 
@@ -71,13 +66,13 @@ Tabel presensis digunakan untuk menyimpan data presensi Participant pada kegiata
 | Field            | Data Type                                | Key | Description                                             |
 | ---------------- | ---------------------------------------- | --- | ------------------------------------------------------- |
 | presensi_id    | int(10) unsigned                         | PK  | Identitas unik data presensi.                           |
-| user_id        | int(10) unsigned                         | FK  | Identitas pengguna yang melakukan presensi.             |
+| user_id        | int(10) unsigned                         | FK  | Identitas participant yang melakukan presensi.             |
 | jadwal_id      | int(10) unsigned                         | FK  | Identitas jadwal kegiatan yang terkait dengan presensi. |
 | waktu_presensi | timestamp                                | -   | Waktu ketika presensi dilakukan.                        |
-| latitude       | decimal(10,7)                            | -   | Koordinat latitude pengguna saat melakukan presensi.    |
-| longitude      | decimal(10,7)                            | -   | Koordinat longitude pengguna saat melakukan presensi.   |
-| status         | enum('hadir', 'izin', 'tidak hadir')     | -   | Status kehadiran pengguna.                              |
-| status_izin    | enum('menunggu', 'disetujui', 'ditolak') | -   | Status pengajuan izin pengguna.                         |
+| latitude       | decimal(10,7)                            | -   | Koordinat latitude participant saat melakukan presensi.    |
+| longitude      | decimal(10,7)                            | -   | Koordinat longitude participant saat melakukan presensi.   |
+| status         | enum('hadir', 'izin', 'tidak hadir')     | -   | Status kehadiran participant.                              |
+| status_izin    | enum('menunggu', 'disetujui', 'ditolak') | -   | Status pengajuan izin participant.                         |
 | alasan_izin    | text                                     | -   | Alasan pengajuan izin.                                  |
 | bukti_izin     | varchar(255)                             | -   | Lokasi atau nama file bukti izin.                       |
 | created_at     | timestamp                                | -   | Waktu data presensi dibuat.                             |
@@ -92,33 +87,4 @@ Hubungan antar tabel dalam database digunakan untuk menghubungkan data pengguna,
 | ------------------------- | ------------------------------------------------------------------- |
 | `penggunas` → `presensis` | Data presensi terhubung dengan pengguna melalui `user_id`.          |
 | `jadwals` → `presensis`   | Data presensi terhubung dengan jadwal kegiatan melalui `jadwal_id`. |
-
-
-## 5. Data Flow in Database
-
-Secara umum, alur data pada database dalam proses presensi adalah:
-
-```text
-Participant
-     │
-     ▼
-Data Participant
-(penggunas)
-     │
-     │ user_id
-     ▼
-Presensi
-(presensis)
-     ▲
-     │ jadwal_id
-     │
-Data Jadwal
-(jadwals)
-```
-
-Pada proses presensi, sistem menghubungkan identitas pengguna dengan jadwal kegiatan. Data lokasi pengguna saat presensi juga disimpan pada tabel presensis untuk mendukung proses validasi lokasi.
-
----
-
-
 
