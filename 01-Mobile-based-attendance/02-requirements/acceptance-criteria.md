@@ -87,8 +87,8 @@
 
 | ID      | Given                                      | When                                       | Then                                          |
 | ------- | ------------------------------------------ | ------------------------------------------ | --------------------------------------------- |
-| AC-14.1 | Admin sedang login                         | Admin membuka data kehadiran               | Sistem menampilkan data kehadiran Participant |
-| AC-14.2 | Admin memilih data kehadiran yang tersedia | Admin melakukan perubahan sesuai hak akses | Sistem menyimpan perubahan data kehadiran     |
+| AC-14.1 | Admin sedang login                         | Admin membuka data kehadiran               | Sistem menampilkan data kehadiran Participant 
+| AC-14.2 | Admin memilih data kehadiran yang tersedia | Admin melakukan perubahan sesuai hak akses | Sistem menyimpan perubahan data kehadiran    |
 
 ### US-15 — Laporan Kehadiran
 
@@ -102,3 +102,10 @@
 | ------- | ---------------------------------------------- | -------------------------- | ----------------------------------------- |
 | AC-15.1 | Admin sedang login | Admin membuka menu kelola izin | Sistem menampilkan daftar participant yang mengajukan izin |
 | AC-15.1 | Admin memilih daftar pengajuan izin | Admin melakukan perubahan sesuai hak akses | Sistem menyimpan perubahan data kehadiran |
+
+### US-15 — Data Peserta
+
+| ID      | Given                                          | When                       | Then                                      |
+| ------- | ---------------------------------------------- | -------------------------- | ----------------------------------------- |
+| AC-15.1 | Admin sedang login | Admin membuka menu data peserta | Sistem menampilkan daftar participant yang terdaftar |
+| AC-15.1 | Admin memilih data yang tersedia | Admin memilih data yang akan dihapus | Sistem menghapus data participant |
