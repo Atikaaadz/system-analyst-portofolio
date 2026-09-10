@@ -1,7 +1,7 @@
 # PORTOFOLIO
-Hai nama saya Atika Dewi Zulaikha lulusan Informatika ddengan konsentrasi teknologi web dan mobile yang memiliki ketertarikan pada bidang System Analyst, Requirement analyst serta Software Quality Assurance.
+Hai nama saya Atika Dewi Zulaikha lulusan baru dari jurusan Informatika dengan konsentrasi teknologi web dan mobile yang memiliki ketertarikan pada bidang System Analyst, Requirement analyst serta Software Quality Assurance.
 
-Portofolio ini berisi beberapa project sebagai pengalaman saya dalam menganalisis kebutuhan, merancang sistem, membuat dokumentasi serta melakukan testing.
+file ini berisi beberapa project sebagai pengalaman saya dalam menganalisis kebutuhan, merancang sistem, membuat dokumentasi serta melakukan testing.
 
 ## PROJECTS
 ### 1. Location-Based Attedance System
