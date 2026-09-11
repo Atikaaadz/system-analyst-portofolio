@@ -4,6 +4,10 @@
 
 This automation script was created to reduce repetitive manual data entry during QA testing.
 
+## Technologies
+- Playwright
+- JavaScript
+  
 ## Data to be Created
 
 ### Positions
@@ -55,10 +59,6 @@ API_TOKEN=<YOUR_TOKEN>
 ```
 
 The actual token is never stored in the repository.
-
-## Cleanup
-
-After testing, the generated data should be removed manually to restore the application to its previous state.
 
 ## Benefits
 
