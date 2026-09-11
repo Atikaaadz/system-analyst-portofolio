@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Onboarding</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <aside>
+      <b>Kantor<span>KU</span></b>
+      <nav>
+        <a>Dashboard</a>
+        <a class="active">Employee Onboarding</a>
+        <a>Employees</a>
+        <a>Payroll</a>
+        <a>Settings</a>
+      </nav>
+    </aside>
+
+    <main>
+      <header>
+        <div>
+          <h1>Employee Onboarding</h1>
+          <p>Add a new employee to the system</p>
+        </div>
+        <div class="user">HR Admin</div>
+      </header>
+
+      <form id="form" class="card">
+        <section>
+          <h2>Personal Information</h2>
+          <div class="grid">
+            <div>
+              <label>Full Name *</label>
+              <input id="full_name">
+              <small id="full_name_e"></small>
+            </div>
+            <div>
+              <label>Personal Email *</label>
+              <input id="email" type="email">
+              <small id="email_e"></small>
+            </div>
+            <div>
+              <label>Phone Number *</label>
+              <input id="phone">
+              <small id="phone_e"></small>
+            </div>
+            <div>
+              <label>Date of Birth *</label>
+              <input id="date_of_birth" type="date">
+              <small id="date_of_birth_e"></small>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Employment Information</h2>
+          <div class="grid">
+            <div>
+              <label>Department *</label>
+              <select id="department">
+                <option value="">Select</option>
+                <option>Engineering</option>
+                <option>Human Resources</option>
+                <option>Finance</option>
+              </select>
+              <small id="department_e"></small>
+            </div>
+            <div>
+              <label>Position *</label>
+              <select id="position">
+                <option value="">Select</option>
+                <option>QA Engineer</option>
+                <option>Software Engineer</option>
+                <option>HR Specialist</option>
+              </select>
+              <small id="position_e"></small>
+            </div>
+            <div>
+              <label>Employment Type *</label>
+              <select id="employment_type">
+                <option value="">Select</option>
+                <option>Permanent</option>
+                <option>Contract</option>
+                <option>Internship</option>
+              </select>
+              <small id="employment_type_e"></small>
+            </div>
+            <div>
+              <label>Join Date *</label>
+              <input id="join_date" type="date">
+              <small id="join_date_e"></small>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Required Documents</h2>
+          <div class="grid">
+            <div>
+              <label>Identity Document *</label>
+              <input id="identity_document" type="file" accept=".pdf,.jpg,.jpeg,.png">
+              <small id="identity_document_e"></small>
+            </div>
+            <div>
+              <label>Employment Contract *</label>
+              <input id="employment_contract" type="file" accept=".pdf,.jpg,.jpeg,.png">
+              <small id="employment_contract_e"></small>
+            </div>
+          </div>
+        </section>
+
+        <div id="message"></div>
+
+        <div class="actions">
+          <button type="button" id="save">Save Draft</button>
+          <button class="primary">Submit Onboarding</button>
+        </div>
+      </form>
+
+      <section id="draft" class="card hidden">
+        <div class="drafthead">
+          <h2>Saved Draft</h2>
+          <span>DRAFT</span>
+        </div>
+        <div id="details" class="details"></div>
+        <div class="actions">
+          <button id="continue">Continue Editing</button>
+          <button id="delete">Delete Draft</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
