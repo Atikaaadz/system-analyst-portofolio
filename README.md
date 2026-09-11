@@ -33,6 +33,16 @@ Teknologi:
 - Geolocation
 - Postman
 
+### HRIS Feature Analysis & Testing
+
+Role: QA / System Analyst
+
+Activities:
+
+- Feature Analysis
+- User Flow Analysis
+- Functional Testing
+
 ## SKILLS
 ### Tools & Technologies
 - Draw.io
@@ -44,6 +54,16 @@ Teknologi:
 - Flutter
 - Laravel
 - MySQL
+- PlayWright
+
+### Software Testing
+- Test Scenario
+- Test Case
+- Functional Testing
+- Exploratory Testing
+- API Documentation
+- Automation Testing
+
 ### System Analysis
 - Requirement Analysis
 - Functional Requirements
