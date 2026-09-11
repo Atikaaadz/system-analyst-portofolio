@@ -15,8 +15,7 @@ Analyze and design the proposed **Employee Onboarding** feature.
 Deliverables:
 
 * System Flow using BPMN
-* List of API Endpoints
-* API Contracts
+* API documentation
 * Non-Functional Requirements
 * User/Test Matrix
 * Monitoring Matrix
